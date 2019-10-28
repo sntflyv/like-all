@@ -1,8 +1,5 @@
 # Env
-/.env
-
 # Composer
-/vendor
 composer.phar
 
 # JS
