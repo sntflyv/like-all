@@ -102,6 +102,12 @@
     ],
     "docker:cleanup": [
       "docker-compose rm -fsv"
+    ],
+    "post-install-cmd": [
+      "find vendor -type d -name .git -exec rm -rf '{}' \\;"
+    ],
+    "post-update-cmd": [
+      "find vendor -type d -name .git -exec rm -rf '{}' \\;"
     ]
   }
 }
