@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS `ig_task` (
     `complete_time` int not null default 0 comment '结束时间',
     PRIMARY KEY (`task_id`),
     KEY `user_id` (`user_id`),
-    KEY `name` (`name`),
     KEY `create_time` (`create_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -66,6 +65,5 @@ CREATE TABLE IF NOT EXISTS `ig_block` (
     PRIMARY KEY (`block_id`),
     KEY `user_id` (`user_id`),
     KEY `peer_user` (`peer_user`),
-    KEY `create_time` (`create_time`),
     KEY `create_time` (`create_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
