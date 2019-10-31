@@ -11,7 +11,7 @@ class m140709_173333_widget_text extends Migration
     {
         $this->createTable('{{%widget_text}}', [
             'id' => $this->primaryKey(),
-            'key' => $this->string()->notNull(),
+            'key' => $this->string(191)->notNull(),
             'title' => $this->string()->notNull(),
             'body' => $this->text()->notNull(),
             'status' => $this->smallInteger(),
