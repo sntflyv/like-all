@@ -36,6 +36,22 @@ class WorkController extends Controller
         var_dump($res);
     }
 
+    /**
+     * 执行任务
+     *
+     * @param Work $work
+     * @return bool|int|mixed
+     */
+    protected function execute(Work $work)
+    {
+        /** @var Task $task */
+        $task = Task::find()->where(['task_id' => $work->task_id])->one();
+        if (!$task) {
+            return false;
+        }
+        return $this->query($task->link, $task->service_type);
+    }
+
     protected function query(string $url, string $type)
     {
         $resp = $this->client->get($url);
